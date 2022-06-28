@@ -44,6 +44,6 @@ class Stack:
          elif choice == 4:
              break
          else:
-             print("Ketik Apa saja")
+             print("hai Apa saja")
 s=Stack()
 s.main()
