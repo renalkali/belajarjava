@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 25 19:48:57 2022
+
+@author: user
+NAMA : Muhammad Rheynal Ghazali
+NIM : 064002100026
+"""
+
+class Stack:
+ def __init__ (self):
+     self.stack = []
+     self.counter = 0
+ def menu(self):
+     print("Data 1 -> Push")
+     print("Data 2 -> Pop")
+     print("Data 3 -> Stack")
+     print("Data 4 ->.Close")
+     print("Tekan ENTER Sesuai Pilihanmu")
+ def push(self):
+     self.stack.append(input("push: "))
+     self.counter +=1
+ def pop(self):
+     if self.counter ==0:
+         print("Stack Kosong")
+     else:
+         print("pop",self.stack.pop())
+         self.counter -= 1
+ def display(self):
+     if self.counter == 0:
+         print("Stack is Empty")
+     else:
+         print("Stack:",self.stack)
+ def main(self):
+     while True:
+         self.menu()
+         choice = int(input())
+         if choice == 1:
+             self.push()
+         elif choice == 2:
+             self.pop()
+         elif choice == 3:
+             self.display()
+         elif choice == 4:
+             break
+         else:
+             print("Ketik Apa saja")
+s=Stack()
+s.main()
